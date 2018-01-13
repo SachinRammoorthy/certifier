@@ -60,8 +60,23 @@ function handleFiles(files){
       }
     }
 
-angular.module('patternfly.navigation').controller('vertNavController', ['$scope',
-  function ($scope) {
+angular.module('patternfly.navigation').controller('vertNavController', ['$scope', '$http',
+  function ($scope, $http) {
+
+    $scope.student = {};
+    $scope.openCert = function(){ //this is the function that will execute on submission of the form, i.e, on click of the Download button
+      $http({
+        url: '/certificates', //url structure: localhost/certificates/...
+        data: $.param($scope.student),
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      }).success(function(certInfo){ //execute this method on success
+          window.location.href = "/certificates/" + certInfo; //open the generated certificate
+      }).error(function(e){ //execute this method on failure
+         alert("Oops! Something went wrong!");
+      });
+    }; //end of cert generation
+
     $scope.navigations = [
             {
               title: "View Certificates",
@@ -105,7 +120,3 @@ angular.module('patternfly.navigation').controller('vertNavController', ['$scope
 
   }
 ]);
-
-
-
-
