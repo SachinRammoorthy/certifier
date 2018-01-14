@@ -105,28 +105,30 @@ $ git checkout -b YOUR_NEW_BRANCH_NAME
 ```
 Then create/edit files as per your coding requirements. Ensure that your code is clean and efficient, and avoid redundancies. It is also advised to follow naming conventions as and where specified. Also make sure that your code is your own, and is not closed-source or stolen.
 
+We use branches because they are very useful when you have multiple Pull Requests in the same repository.
+
 **Step 3: Commiting and pushing the changes:**
 
 *Commit* the changes and *push* the commit to your forked repository on GitHub by:
 ```sh
-$ git add FILENAME.EXTENSION    # for including inidividual files
+$ git add path/to/your/file    # for including inidividual files.
 $ git add .     # for including all files at once
 ```
 ```sh
-$ git commit -m "Your commit message here"
+$ git commit -m "DESCRIBE YOUR CHANGES"
 $ git push origin
 ```
 If stuck at this point, refer [here](https://readwrite.com/2013/10/02/github-for-beginners-part-2/)
 
-**Step 4: Sending a Pull Request (PR):**
+**Step 4: Creating a Pull Request:**
 
-Once you are done coding the changes, commit the files and create a [*PR*](https://help.github.com/articles/about-pull-requests/). Click on "Compare across forks" when creating the PR, and select the master branch of this repo as the base. Set the head to your branch that your committed onto. Click on the button "Create Pull Request". Give your PR a meaningful title and a brief message explaining the purpose of your commits.
+Once you are done coding the changes, commit the files and create a [*Pull Request*](https://help.github.com/articles/about-pull-requests/). Click on "Compare across forks" when creating the Pull Request, and select the master branch of this repo as the base. Set the head to your branch that your committed onto. Click on the button _Create Pull Request_. Give your Pull Request a meaningful title and a brief message explaining the purpose of your commits.
 
 **Step 5: Ensuring code quality**
 
-Once a PR has been created, check if it can be merged without any issues or conflicts. If there are any issues, repeat from [***Step 2***](#step2) and try to resolve them. Wait for a reviewer to cross check your changes, and let them merge your changes.
+Once a Pull Request has been created, check if it can be merged without any conflicts. If there are any issues, repeat the process starting [***Step 2***](#step2) and try to resolve them. Wait for a reviewer to cross check your changes. If your work is satisfactory, the reviewer will merge your changes. They may also request additional changes, which you should implement and, then update the Pull Request.
 
-* Additional Reference regarding clone, fork and editing a repository [**here**](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository).
+* Additional Reference regarding cloning, forking and editing a repository are available [**here**](https://egghead.io/lessons/javascript-how-to-fork-and-clone-a-github-repository).
 
 
 `Keep Contributing to open source!` :smile:
@@ -138,3 +140,6 @@ Once a PR has been created, check if it can be merged without any issues or conf
 - [Git Introduction](https://guides.github.com/introduction/flow)
 - [Terminal Handbook](http://linuxcommand.org/)
 - [Command Prompt Handbook](http://www.makeuseof.com/tag/a-beginners-guide-to-the-windows-command-line/)
+
+
+Happy Coding!
